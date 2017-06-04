@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HeaderComponent } from './components/header';
+import { HeaderComponent } from './components/header/header';
 import { FooterComponent } from './components/footer';
 import { ContentComponent } from './components/content';
 
