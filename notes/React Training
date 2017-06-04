@@ -1,0 +1,118 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------UI ARCHITECTURE--------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+React - UI archiecture
+agent b/w end user and the system for a purpose
+1. view stateless UI
+GUI/CUI
+passive
+
+2. view stateful UI
+windows APP/WPF/Flash
+active
+
+UI actions
+Receive -> process -> preapre -> present
+
+UI Roles
+UI Deisgner - UI developer
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UI components
+1. container for I/O data - Model - is contract b/w 2 logic components to work
+2. logic to process input data and prep output data - generally programmed - developer - Controller, Presenter, View Model.
+3. logic to recieve input data and present output data - declarative - designer - View
+
+
+Appraoch to design UI components so they are loosely coupled to aciveve clear seperation of concern.
+
+MVC - controller first UI archicture - stateless - passive
+MVP - View first UI architecture - Stateful - active
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------REACT------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- go to server once and get the html then for every action don't have to create entire html from strach.
+- single page application
+- jquery is library simlified to interact with DOM.
+- to build single page application UI f/w is needed which is based on UI architecture.
+- stateless environment - stateful application
+
+React can be combined with angular, jquery anything.
+change detection is one-way binding. 
+fake DOM in memory - diffing algo is applied when a change is detected in the model state.
+detecting the difference in Fake DOM, patch the original DOM.
+component based architecture
+
+React simplyfies the updation of DOM by not looping through the entire DOM.
+
+
+React is a javascript lib which helps to design scalable, perfomant centric, effirient resource utilized views and view components required for modern/complex user iterfaces.
+React DOM API - virtual DOM, change detection, diffing, patching with real DOM loaded with the browser.
+React component API - provides UI strcture of the application
+
+Characteristics
+1. simplicity and focus to views only of interfaces
+
+2. open source code, easy to disctribute, smaller memory footprint in installation and runtime.
+
+3. component based archiecture or app design. Component is basic buliding block of the application.
+4. Single Responsility principle of SOILD 
+
+5. one-way data binding support
+
+6. observer design pattern based notifications for state changes.
+properties comes down, actions goes up 
+component = UI markup(JSX) + state + actions
+Data came out of component is immutable. component only can update it.
+
+7. virtual dom simplifies reduces CPU processing for change detection/optimizes real DOM updates.
+faster than angular js. competeter of angular2.0
+
+8.Javascript extension  - JSX - helps to combine view markup seemlessly into compoent design
+
+9. Component life cycle. which helps to customize actions as & when React renders, diffs, pathces.
+component = UI markup(JSX) + state + actions + lifecycle.
+
+2 packages for react library
+REACT, REACTDOM.
+babel-preset-react - helps write react code using ES6.0
+
+npm i --save-dev babel-core babel-loader babel-preset-es2015 babel-polyfill babel-preset-es2017 babel-preset-env webpack http-server react react-dom babel-preset-react
+
+Recommendations 
+react-forms - for formbased
+react-router - for routing
+redux - for state-management
+
+Disadvantage- need to make use of other compatible libraries to fully build ur application.
+
+
+ES6 - transpile
+
+Zest - testing 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------

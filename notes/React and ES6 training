@@ -1,0 +1,216 @@
+React and ES6 training
+Day 1 - June 2
+Javascript 
+Characterics 
+1. OOO- prod language
+2. dynamic prog language
+3. functional prod language
+4. single threaded prog env.
+
+positive - 
+1. simplified type system
+2. simplied array for collections
+3. closure suuport
+https://www.w3schools.com/js/js_hoisting.asp
+
+4. funtions are data object
+
+5. prototypal inheritence. 
+a.porotype  - inhierttenace
+
+
+6. supports ploymorphsim  & overiding 
+using call or apply.
+ funtions in JS cannot be overloaded they will be overwritten instead
+
+7. Regex/Exception handling
+
+8. DOM & BOM API (Bom - window.location)
+
+9. XHR for AJAX
+
+nigatives
+1. No modulartity support - logical/physical
+2. No build int support to MDM (Module D Management)
+3. No support for module loading on demand at runtime
+4. OOO features indirectly implemented
+5. no builtin support for coordinating multiple/aysnc opetrions. 
+
+We should not provide a solution where view is loaded from server side. 
+Unless the view is heavy like 2MB which mobile devices cannot process or load.
+Keep server for business rule, data modelling and fetch.
+Javascript is used for I/o operetaions not in CPU intenstive work.
+
+
+------------------------------------------------------------------------------------
+ECMAscript - concept  (like interface)
+javascript - realization of the concept (like class)
+
+------------------------------------------------------------------------------------
+all browsers support ES5.
+transform & compile - transoiler for old browsers which supports ES5.
+
+
+code can be transformed to ES5 at build time or also inline in the browser. 
+For development test environemt where we can choose Traceur for transpiling code in the browser inline
+
+To transpile the ES6 code to ES5 during build process - use babel js.io
+
+------------------------------------------------------------------------------------
+
+do we want the client to go to server and download all files indivisualy (babelify) then use babel Cli. 
+if we want to bundle all the js files together and download to client then use webpack bundler.
+
+------------------------------------------------------------------------------------
+
+ES6 - transpiler -> Babel - bundler -> webpack
+
+------------------------------------------------------------------------------------
+Refer - http://kangax.github.io/compat-table/es6/
+caniuse.com
+
+ES6 features
+1. blocked scoped declarations (let)
+2. const declarations
+3. classes, constrctor, properties, methods
+4. static (static keyword) members support - properties/method
+5. multi-level inheritence support with extends
+6. direct support for polymorphsim and overriding with super keyword
+7. built-in modularity support. import and export keywords introduced and control over what to export and import.
+while importing package don't use {}
+while importing class use {}
+dependency management is taken care.
+8. module loading is simpleified when used webpack bundling. Browsers with harmony features (ready to have bug) by default support module loading.
+9. arrow functions. anonymus functions implemented as expression.
+Lambda operator =>.
+10. lexical 'this' pointer.
+arrow funtions explictly donot initialize this pointer.
+in which scope arrow functions are created, 'this' has context of the function it is called.
+11. default parameters, also with expressions
+function x (a,b)
+{
+	a= a||10
+	b = b||20
+}
+
+function x (a = 10, b = getValue(a))
+{
+	
+}
+
+12. spread parameters (...)
+function x(a,b,c,d)
+{}
+var values = (10,20,30,40)
+x(...values);
+
+if array has less values than what parameters then null is passed.
+
+13. Rest parameters
+if array has more then use arguments, then u need to splice
+function x(a,b,...args) [REST]
+{}
+var values = (10,20,30,40)
+x(...values); [SPREAD]
+
+14.destcurcitng means - evalaute and assign variables
+
+15. Template String 
+var id = 10
+var name = raj
+var output = `My id: ${somexpresssion id}
+Name: ${name}`;
+within ${} we can send any javascript expression.
+
+16. Iterator support 
+customizing how objects are ennumerated when they are used in loop.
+
+17. For..of loop
+iterates values in the array or call custom iterators imlpementation
+for..in loop - loops using the index
+
+18. enhanced object literals
+
+__proto__: new customer()
+var val = 1;
+var obj={
+	id=10,
+	name,
+	work(){
+
+	};
+	__proto__: new customer();
+	[`_prop${val}`]:100
+}
+obj._prop1
+
+
+19. proxy pattern or decorator pattern
+enhance an existing object without impacting the existing compatibality.
+built-in in ES6 - proxy
+proxy helps add more NFR logic to an existing implementation w/o breaking compatibilty with implemenattaion.
+aspect  oritented programming (APO in .net or java)
+
+20. promise - represents the future result.
+- javascript don't accept callbacks, instead return promise. Callback is fine if we want to do async sequencitially. If we want to do async pararelly we need to use promise
+- this is all based on events. 
+promise can coordinate with multiple promises. 
+ES6 has built-in support to promise.
+
+promise.all - equivalent to await.all
+promise.race - equivalent to await.atleast1
+
+21. create a private property that's not going to be serialized. 
+Symbols support - unique identifier, private property, and not searlizable. 
+function x() {
+	this.a = 10
+	this.b=10
+	var m = symbol("desc")
+	this.[m] = 100
+	this.getValue = function(){
+		return this.[m];
+	}
+}
+
+22. binary and octal literals
+var a = 0b101001 (binary)
+var b = 0O       (octal)
+
+
+23. Set, WeakSet, Map, WeakMap
+
+24. subclassable built-ins
+array functions, error, reg-ex
+
+25. Reflect API - metadata query API
+
+NOTES
+- All model classes should be string formattable.
+- ES6 generators
+   - special function which helps to return multiple values over different period of time by mainitainig it's execution state.
+   - Generetaor funtions names must be prefixed with *.
+   - Yeild keyword helps to maintain the execution state and return value to the caller.
+
+- whenever u design a class with heavy work/ async operation, you should return a promise once it is completed.
+- it is not possible for u 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cd learninges6features
+npm init -y
+npm i --save-dev babel-core babel-loader babel-preset-es2015 babel-polyfill babel-preset-es2017 babel-preset-env webpack http-server
+npm WARN prefer global http-server@0.10.0 should be installed with -g
+
+
+curl -u jd.pranati.mahato@gmail.com https://api.github.com/user/repos -d "{\"name\":\"learningEs6features\",\"description\":\"this is my first ed6 project\"}" -k
+git init
+git add.
+git commit -m "final commit"
+git remote add origin "https://github.com/<myaliasname>/learninges6features.git"
+git push origin master
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------END OF ES6 TRAINING------------------------------------------------------------------------
+
+
+https://github.com/iomegak12/cventholexcersices.git
+
+
+
