@@ -5,7 +5,7 @@ class Menu extends React.Component {
         let menu = (
             <div id="menu">
                 <ul>
-                    <li class="first"><a href="#">Home</a></li>
+                    <li className="first"><a href="#">Home</a></li>
                     <li><a href="#">Products</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Blog</a></li>
