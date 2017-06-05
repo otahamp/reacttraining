@@ -149,41 +149,18 @@ md - desktop
 lg - large (TVs)
 http://www.layoutit.com/build
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note1:
+In order to access a DOM element reference in a View compoenet, react provides a special attribute to HTML controls named ref which would be called at runtime and implementtaion should assign to current object.
+for example :
+	<input type = 'text' ref={element => this.inputTitle = element} />
+
+Ref provides wrapped DOM element object and it's mockable, it becomes easy to continue testing react view components.
+
+Note2:
+Inorder to enable the react router to replace the content after they're router and processed, the parent view component should user '{this.props.children}' which would embed the rendered content as part of parent content.
+This is very much required when routing renders dynamic content and nned to be placed appropriately in the layout.
+
+
+

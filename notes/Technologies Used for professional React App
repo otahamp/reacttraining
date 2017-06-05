@@ -1,0 +1,78 @@
+-------**Technologies Used for professional React application**---------
+HTML5 - Markup
+
+CSS3 - for styling & look n feel.
+
+Less - programmable/ compilable css
+
+bootstrap/foundation - CSS framework
+              - MF- RWD (mobile first responsive web-design)
+
+COOKIES should not be used.
+session storage/locale storage  API (provided by HTML5) - Client side data storage
+
+WebWorker - Async Javascript
+Web Sockets - Push based communication channel / duplex communication - helps to avoid polling @ server side.
+2 new protocols: WS - Web Socket,  WSS - Web Socket Secure
+
+Node packages- server side Dev tools/support
+
+NPM - resuable node packages repository. 
+
+Yarn - alternative to npm.
+
+VSCode/Sublime/Webstorm - Javscript IDE
+
+ES6 - Mordern JS OO lnaguage
+
+Babel - Es6 transpiler
+
+React - App development library for views
+
+Redux - App state management
+
+React.Router - Navigation library for react projects
+
+Redux.Thunk - Async actions on Application state with redux
+
+Jest - Unit testing api for react
+
+Jest Mock - mocking library for react components.
+
+Fetch API - simpleified and promises supported ajax libarary
+
+Istanbul - code coverage for React App
+
+ES6Lint - code quality (static code analysis)
+
+JSDoc - javascript documentation framework
+
+JsDocGenerator - document generator.
+
+BrowserSync - live reload of built apps
+
+WebPack - Bundler
+
+Webpack Watch - Automatic bundler when file system changes.
+
+Chrome - Browser
+
+Express - node.js rest framework for debug or web application framework
+
+Scoket IO - websocket server side api
+
+JWT - json web tocken API. (authentication)
+
+Electron - React based application as desktop App. React native application.
+
+
+-------------------------------------
+https://github.com/facebookincubator
+-------------------------------------
+
+
+
+
+
+
+
