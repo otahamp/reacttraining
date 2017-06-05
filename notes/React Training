@@ -97,10 +97,83 @@ npm -g npm -i
 
 --------------------------------------------------------------DAY 3----------------------------------------------------------------------------------------------------------
 
-- Propeties in react are immutable and can't be changed.
+- Propeties and States in react are immutable and can't be changed.
 - State changes cause react component to be re-rendered.
 - GRASP - general responsibilty awareness software pattern
 - in the jsx whenever array of items are ietrated to render DOM elements, the DOM element must have a key. 
+
+- If state is changed, a new state is returned. If there's different in the new state, then the view is rendered.
+- components should have readOnly access to a data, state. If there's a need to change the state/data, component should call the dispatcher will call actions and the action can modify the data and create a new state.
+- In mordern application design, data management should not be responsibilty of the component.
+- State is global
+- single dispatcher in an application
+- react component - give data to component, render the markup. If there's a data needs to be changed based on action, then call the dispatcher.
+
+- 3 components for state-managment concept.- 
+1. store - initital data.
+2. dispatcher(flux name) - checks the action, work on the given state and creates a new state.
+reducer (redux name) - benefits: a) how many previous states to maintain.
+3. actions to create a new state. pass action to dispatcher - it should have action parameter.
+
+CQRS design principles.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------REDUX------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+State Management - A concept or an approach to main a global application state and allow dispatcher to execute appropriate actions to change the state as a new state.
+Actions do not mutate the state. State is in a store. State is a simple javascript object.
+
+Redux - a js library which has implementation & centralized application state management & notifies subscribers as a state changes.
+
+when the store state is changed it notifies view by susbcribing.
+3 components for state-management:
+1. store - state - json object
+2. dispatcher/Reducer - action receiver
+3. action - a pure function which works on a given state & return a new state after change.
+
+1 store - 1 reducer
+if u have more than 1 reducer u need to combine into 1 app state.
+
+Characteristics - 
+1. global app store
+2. read-only
+3. pure function (as actions through dispatcher)
+
+npm i --save-dev http-server redux bootstrap
+
+bootstrap css
+col-
+xs - smartphone
+sm - tablet
+md - desktop
+lg - large (TVs)
+http://www.layoutit.com/build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
