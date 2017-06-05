@@ -77,8 +77,9 @@ ES6 features
 5. multi-level inheritence support with extends
 6. direct support for polymorphsim and overriding with super keyword
 7. built-in modularity support. import and export keywords introduced and control over what to export and import.
-while importing package don't use {}
-while importing class use {}
+while importing package/class don't use {}
+while importing object of a class use {}
+
 dependency management is taken care.
 8. module loading is simpleified when used webpack bundling. Browsers with harmony features (ready to have bug) by default support module loading.
 9. arrow functions. anonymus functions implemented as expression.

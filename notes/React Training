@@ -93,16 +93,14 @@ ES6 - transpile
 Zest - testing 
 
 
+npm -g npm -i
 
+--------------------------------------------------------------DAY 3----------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
+- Propeties in react are immutable and can't be changed.
+- State changes cause react component to be re-rendered.
+- GRASP - general responsibilty awareness software pattern
+- in the jsx whenever array of items are ietrated to render DOM elements, the DOM element must have a key. 
 
 
 
